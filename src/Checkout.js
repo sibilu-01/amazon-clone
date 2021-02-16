@@ -17,17 +17,15 @@ export default memo(function Checkout() {
                     <h3> Hello {user?.email}</h3>
                     <h2 className="checkout-title">
                     Your Shopping Basket
-                    <FlipMove>
-                        {basket.map(item => (
-                            <CheckoutProduct
-                                id = {item.id}
-                                title = { item.title }
-                                image = { item.image }
-                                price = { item.price }
-                                rating = { item.rating }
-                            />
-                        ))}
-                    </FlipMove>
+                    {basket.map(item => (
+                        <CheckoutProduct
+                            id = {item.id}
+                            title = { item.title }
+                            image = { item.image }
+                            price = { item.price }
+                            rating = { item.rating }
+                        />
+                    ))}
                     {/* <CheckoutProduct/> */}
                     </h2>
                 </div>
