@@ -12,34 +12,15 @@ function Home() {
                 />      
             </div>
             <div className='home-row'>
-                <Product 
+                <Product
+                    id = {12345678} 
                     title = "the lean startup"
                     price={29.99}
                     image="http://1.bp.blogspot.com/-T-d3JPMr-Uk/UPshLuidy6I/AAAAAAAAFbU/vOiHd0qgnC4/s1600/lean-startup_book-cover.jpeg"
                     rating={5}
                 />
                 <Product 
-                    title = "the lean startup"
-                    price={29.99}
-                    image="http://1.bp.blogspot.com/-T-d3JPMr-Uk/UPshLuidy6I/AAAAAAAAFbU/vOiHd0qgnC4/s1600/lean-startup_book-cover.jpeg"
-                    rating={5}
-                />
-            </div>
-
-            <div className = 'home-row'>
-                <Product 
-                    title = "the lean startup"
-                    price={29.99}
-                    image="http://1.bp.blogspot.com/-T-d3JPMr-Uk/UPshLuidy6I/AAAAAAAAFbU/vOiHd0qgnC4/s1600/lean-startup_book-cover.jpeg"
-                    rating={5}
-                />
-                <Product 
-                    title = "the lean startup"
-                    price={29.99}
-                    image="http://1.bp.blogspot.com/-T-d3JPMr-Uk/UPshLuidy6I/AAAAAAAAFbU/vOiHd0qgnC4/s1600/lean-startup_book-cover.jpeg"
-                    rating={5}
-                />
-                <Product 
+                    id = {12345678}
                     title = "the lean startup"
                     price={29.99}
                     image="http://1.bp.blogspot.com/-T-d3JPMr-Uk/UPshLuidy6I/AAAAAAAAFbU/vOiHd0qgnC4/s1600/lean-startup_book-cover.jpeg"
@@ -49,6 +30,31 @@ function Home() {
 
             <div className = 'home-row'>
                 <Product 
+                    id = {12345678}
+                    title = "the lean startup"
+                    price={29.99}
+                    image="http://1.bp.blogspot.com/-T-d3JPMr-Uk/UPshLuidy6I/AAAAAAAAFbU/vOiHd0qgnC4/s1600/lean-startup_book-cover.jpeg"
+                    rating={5}
+                />
+                <Product 
+                    id = {12345678}
+                    title = "the lean startup"
+                    price={29.99}
+                    image="http://1.bp.blogspot.com/-T-d3JPMr-Uk/UPshLuidy6I/AAAAAAAAFbU/vOiHd0qgnC4/s1600/lean-startup_book-cover.jpeg"
+                    rating={5}
+                />
+                <Product 
+                    id = {12345678}
+                    title = "the lean startup"
+                    price={29.99}
+                    image="http://1.bp.blogspot.com/-T-d3JPMr-Uk/UPshLuidy6I/AAAAAAAAFbU/vOiHd0qgnC4/s1600/lean-startup_book-cover.jpeg"
+                    rating={5}
+                />
+            </div>
+
+            <div className = 'home-row'>
+                <Product 
+                    id = {12345678}
                     title = "the lean startup"
                     price={29.99}
                     image="http://1.bp.blogspot.com/-T-d3JPMr-Uk/UPshLuidy6I/AAAAAAAAFbU/vOiHd0qgnC4/s1600/lean-startup_book-cover.jpeg"

@@ -1,26 +1,44 @@
 import React from 'react'
 import './Header.css'
+import { Link } from "react-router-dom"
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
+import { useStateValue } from './StateProvider';
+import {auth} from './firebase'
 function Header() {
+
+    const [{basket, user}, dispatch] = useStateValue();
+    console.log("UUUSER 1 >>> " , user)
+    const handleAuthentication = () => {
+        if (user) {
+            console.log("UUUSER>>> " , user)
+            auth.signOut();
+        }
+    }
     return (
         <div className = 'header'>
-            <img className = 'header-logo' 
-            src= 'https://tse4.mm.bing.net/th?id=OIP.9l7oS9LpgfDzE-jh5Kkl5QHaDa&pid=Api&P=0&w=335&h=155'/>
+            <Link to = "./">
+                <img className = 'header-logo' 
+                src= 'https://tse4.mm.bing.net/th?id=OIP.9l7oS9LpgfDzE-jh5Kkl5QHaDa&pid=Api&P=0&w=335&h=155'/>
+            </Link>
             <div className = 'header-search'>
                 <input className = 'header-searchInput' 
                 type = 'text'/>
-                <SearchIcon className = 'header-searchIcon'/>
+                <Link to = "#">
+                    <SearchIcon className = 'header-searchIcon'/>
+                </Link>
             </div>
             <div className = 'header-nav'>
-                <div className = 'header-option'>
-                    <span className = 'header-option-lineone'>
-                        Hello Guest
-                    </span>
-                    <span className = 'header-option-linetwo'>
-                        Sign in
-                    </span>
-                </div>
+                <Link to = { !user && './login' }>
+                    <div onClick = {handleAuthentication} className = 'header-option'>
+                        <span className = 'header-option-lineone'>
+                            {user ? `Hello ${user?.email}`: 'Hello Guest'}
+                        </span>
+                        <span className = 'header-option-linetwo'>
+                            { user ? 'Sign out' : 'Sign in' }
+                        </span>
+                    </div>
+                </Link>
                 <div className = 'header-option'>
                     <span className = 'header-option-lineone'>
                         Returns
@@ -37,10 +55,14 @@ function Header() {
                         Prime
                     </span>
                 </div>
-                <div className = 'header-optionBasket'>
-                    <ShoppingBasketIcon/>
-                    <span className = 'header-option-lineTwo header-basketCount'>0</span>
-                </div>
+                <Link to = "./checkout">
+                    <div className = 'header-optionBasket'>
+                        <ShoppingBasketIcon/>
+                        <span className = 'header-option-lineTwo header-basketCount'>
+                            {basket?.length}
+                        </span>
+                    </div>
+                </Link>
             </div>
         </div>
     )
