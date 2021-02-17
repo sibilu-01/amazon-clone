@@ -36,7 +36,6 @@ function Payment() {
     console.log('THe SEcret is ', clientSecret)
     console.log("Person is >>>", user)
     const handleSubmit = async (event) => {
-        //
         event.preventDefault();
         setProcessing(true);
 

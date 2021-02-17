@@ -6,6 +6,7 @@ import Checkout from "./Checkout"
 import Login from "./Login"
 import Payment from "./Payment"
 import Orders from "./Orders"
+import Footer from "./Footer"
 import { auth } from "./firebase";
 import {BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import { useStateValue } from "./StateProvider";
@@ -59,6 +60,7 @@ function App() {
           <Route path = "/">
             <Header/>
             <Home/>
+            <Footer/>
           </Route>
         </Switch>
       </div>
